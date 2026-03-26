@@ -1,0 +1,59 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "enki",
+      "intents": [
+        {
+          "name": "AskEnkiIntent",
+          "samples": [
+            "{Query}",
+            "ask {Query}",
+            "to {Query}",
+            "about {Query}",
+            "what is {Query}",
+            "how do I {Query}",
+            "can you {Query}",
+            "check {Query}",
+            "summarize {Query}",
+            "analyze {Query}",
+            "create {Query}",
+            "build {Query}",
+            "make {Query}",
+            "show me {Query}",
+            "tell me {Query}",
+            "explain {Query}",
+            "help with {Query}"
+          ],
+          "slots": [
+            {
+              "name": "Query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help",
+            "what can you do",
+            "how do I use this",
+            "what are my options"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}

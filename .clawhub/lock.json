@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1774152362145
+    },
+    "local-web-search-skill": {
+      "version": "0.1.0",
+      "installedAt": 1774152563930
+    },
+    "ollama-web-search": {
+      "version": "1.0.1",
+      "installedAt": 1774152620101
+    },
+    "search-web": {
+      "version": "1.0.0",
+      "installedAt": 1774158861266
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1774159039704
+    },
+    "outlookcli": {
+      "version": "1.1.0",
+      "installedAt": 1774160668122
+    },
+    "m365-pnp-cli": {
+      "version": "1.0.1",
+      "installedAt": 1774160697437
+    },
+    "ms365": {
+      "version": "1.0.0",
+      "installedAt": 1774165371469
+    },
+    "youtube-summarizer": {
+      "version": "1.0.0",
+      "installedAt": 1774165879649
+    },
+    "youtube-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1774165925939
+    },
+    "youtube-full": {
+      "version": "1.4.1",
+      "installedAt": 1774165993324
+    },
+    "youtube-publisher": {
+      "version": "1.0.0",
+      "installedAt": 1774213441795
+    }
+  }
+}

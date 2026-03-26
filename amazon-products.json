@@ -1,0 +1,40 @@
+{
+  "associate_id": "m4quickquail-20",
+  "products": [
+    {
+      "name": "Brinsea Mini II Advance",
+      "asin": "B000A6B00O",
+      "category": "Incubator",
+      "price": "$300-400",
+      "commission": "~$18-24"
+    },
+    {
+      "name": "Little Giant Still Air",
+      "asin": "B00N59A5J2", 
+      "category": "Incubator",
+      "price": "$50-80",
+      "commission": "~$3-5"
+    },
+    {
+      "name": "Manna Pro Gamebird Feed",
+      "asin": "B003GD3L7E",
+      "category": "Feed",
+      "price": "$25-40",
+      "commission": "~$1.50-2.40"
+    },
+    {
+      "name": "Quail Cage 6-Layer Stackable",
+      "asin": "B08L8C1BZX",
+      "category": "Housing",
+      "price": "$100-150",
+      "commission": "~$6-9"
+    },
+    {
+      "name": "Automatic Quail Feeder",
+      "asin": "B07Z4K1Y7T",
+      "category": "Supplies",
+      "price": "$20-30",
+      "commission": "~$1.20-1.80"
+    }
+  ]
+}
