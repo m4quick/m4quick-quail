@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quail Starter Kit | M4Quick Quail Farm</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .tagline { font-size: 1.2em; opacity: 0.9; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .kit-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .kit-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        .product-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .product-item:hover { transform: translateX(5px); border-color: #667eea; }
+        .product-icon { font-size: 2em; margin-right: 20px; }
+        .product-info { flex: 1; }
+        .product-info h3 { margin-bottom: 5px; color: #333; }
+        .product-info p { color: #666; margin-bottom: 10px; }
+        .price { font-weight: bold; color: #667eea; margin-right: 15px; }
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .buy-button:hover { background: #5a67d8; }
+        .total-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .total-box h2 { margin-bottom: 10px; }
+        .total-price { font-size: 2.5em; font-weight: bold; }
+        .disclaimer {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            margin-top: 40px;
+        }
+        .priority-high { border-left: 4px solid #28a745; }
+        .priority-medium { border-left: 4px solid #ffc107; }
+        .priority-low { border-left: 4px solid #6c757d; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐣 Quail Starter Kit</h1>
+        <p class="tagline">Everything You Need to Start Raising Coturnix Quail</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to M4Quick Quail Farm</a>
+
+        <div class="intro">
+            <h2>Why This Kit?</h2>
+            <p>This curated starter kit includes all the essential equipment we recommend for anyone beginning their quail-raising journey. We've selected these products based on reliability, value, and our own experience hatching and raising hundreds of quail.</p>
+            <p><strong>Estimated Total:</strong> $400-600 (depending on options selected)</p>
+            <p><em>As an Amazon Associate, we earn from qualifying purchases.</em></p>
+        </div>
+
+        <div class="kit-section">
+            <h2>🥚 Phase 1: Incubation (Essential)</h2>
+            
+            <div class="product-item priority-high">
+                <div class="product-icon">🥚</div>
+                <div class="product-info">
+                    <h3>Brinsea Mini II Advance Incubator</h3>
+                    <p>The gold standard for small-scale hatching. Automatic turning, precise temperature control, and excellent hatch rates. Perfect for 7-12 eggs at a time.</p>
+                    <span class="price">~$300-400</span>
+                    <a href="https://www.amazon.com/dp/B000A6B00O?tag=m4quickquail-20" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="product-item priority-medium">
+                <div class="product-icon">💡</div>
+                <div class="product-info">
+                    <h3>Egg Candler LED Light</h3>
+                    <p>Check embryo development and identify non-viable eggs during incubation. Saves you from bad surprises at hatch time.</p>
+                    <span class="price">~$10-15</span>
+                    <a href="#" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="product-item priority-medium">
+                <div class="product-icon">🌡️</div>
+                <div class="product-info">
+                    <h3>Digital Hygrometer/Thermometer</h3>
+                    <p>Track temperature and humidity accurately. Critical for successful hatching — don't rely on built-in displays alone.</p>
+                    <span class="price">~$10-15</span>
+                    <a href="#" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="kit-section">
+            <h2>🏠 Phase 2: Housing (Week 2-3)</h2>
+            
+            <div class="product-item priority-high">
+                <div class="product-icon">🏠</div>
+                <div class="product-info">
+                    <h3>Quail Brooder Cage (6-Layer)</h3>
+                    <p>Stackable cages with pull-out trays for easy cleaning. Good ventilation and space for growing birds. Can house 20-30 quail per tier.</p>
+                    <span class="price">~$100-150</span>
+                    <a href="https://www.amazon.com/dp/B08L8C1BZX?tag=m4quickquail-20" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="product-item priority-high">
+                <div class="product-icon">🚰</div>
+                <div class="product-info">
+                    <h3>Automatic Quail Waterer</h3>
+                    <p>Clean water delivery system designed for quail. Reduces spillage and keeps water fresh. Essential for healthy birds.</p>
+                    <span class="price">~$20-30</span>
+                    <a href="https://www.amazon.com/dp/B07Z4K1Y7T?tag=m4quickquail-20" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="product-item priority-medium">
+                <div class="product-icon">🍽️</div>
+                <div class="product-info">
+                    <h3>Quail Feeder</h3>
+                    <p>Long feeder with covered design to reduce waste. Holds several days of feed, perfect for busy schedules.</p>
+                    <span class="price">~$15-25</span>
+                    <a href="#" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="product-item priority-medium">
+                <div class="product-icon">🔥</div>
+                <div class="product-info">
+                    <h3>Ceramic Heat Emitter (100W)</h3>
+                    <p>Provides warmth without light (doesn't disrupt sleep cycles). Essential for chicks in first 2-3 weeks.</p>
+                    <span class="price">~$10-20</span>
+                    <a href="#" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="kit-section">
+            <h2>🌾 Phase 3: Ongoing Care</h2>
+            
+            <div class="product-item priority-high">
+                <div class="product-icon">🌾</div>
+                <div class="product-info">
+                    <h3>Manna Pro Gamebird Feed (20% Protein)</h3>
+                    <p>Formulated specifically for game birds. 20% protein for healthy growth and good egg production. Start with starter, switch to layer at 6 weeks.</p>
+                    <span class="price">~$25-40 per 25lb bag</span>
+                    <a href="https://www.amazon.com/dp/B003GD3L7E?tag=m4quickquail-20" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+
+            <div class="product-item priority-low">
+                <div class="product-icon">📊</div>
+                <div class="product-info">
+                    <h3>Breeding Record Journal</h3>
+                    <p>Track hatch dates, egg production, and breeding pairs. Optional but helpful for managing your flock.</p>
+                    <span class="price">~$10-15</span>
+                    <a href="#" target="_blank" class="buy-button">View on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>💡 Budget Alternative:</strong> If the Brinsea is too expensive, the <a href="https://www.amazon.com/dp/B00N59A5J2?tag=m4quickquail-20" style="color: #667eea;">Little Giant Still Air Incubator</a> (~$50-80) is a solid budget option. We've hatched successfully with it, though hatch rates are lower than premium models.
+        </div>
+
+        <div class="total-box">
+            <h2>🎯 Ready to Start?</h2>
+            <p class="total-price">$400-600</p>
+            <p>Estimated total for complete starter kit</p>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.9;">
+                Start with Phase 1 (incubation) and add Phase 2 items as hatch date approaches
+            </p>
+        </div>
+
+        <div class="kit-section">
+            <h2>📚 Free Resources</h2>
+            <p>Before you buy anything, grab our free guides:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><a href="#" style="color: #667eea;">Complete Quail Hatching Checklist</a></li>
+                <li><a href="#" style="color: #667eea;">Week-by-Week Care Guide</a></li>
+                <li><a href="https://www.youtube.com/@m4quick" style="color: #667eea;">Subscribe to @m4quick on YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 M4Quick Quail Farm. All rights reserved.</p>
+        <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+        <p>Questions? Email: <a href="mailto:michael@mirzaie.com">michael@mirzaie.com</a></p>
+    </footer>
+</body>
+</html>
