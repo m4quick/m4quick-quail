@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  daily-brief:
+    build: .
+    container_name: daily-brief
+    ports:
+      - "5000:5000"
+    environment:
+      # Email settings (optional)
+      - EMAIL_ENABLED=false
+      - SMTP_SERVER=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=
+      - SMTP_PASS=
+      - EMAIL_TO=
+      
+      # Telegram settings (optional)
+      - TELEGRAM_ENABLED=false
+      - TELEGRAM_BOT_TOKEN=
+      - TELEGRAM_CHAT_ID=
+      
+      # Pi-hole & Weather
+      - PIHOLE_IP=192.168.1.57
+      - WEATHER_LOCATION=Virginia+USA
+    restart: unless-stopped

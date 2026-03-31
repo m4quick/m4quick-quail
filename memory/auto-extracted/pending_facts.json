@@ -1,0 +1,19 @@
+{
+  "facts": [
+    {
+      "text": "work in the mornings",
+      "category": "preference",
+      "full_context": "I prefer to work in the mornings.",
+      "extracted_at": "2026-03-31T03:06:54.611197",
+      "approved": null
+    },
+    {
+      "text": "schedule daily standups at 9am",
+      "category": "decision",
+      "full_context": "We should schedule daily standups at 9am.",
+      "extracted_at": "2026-03-31T03:06:54.611393",
+      "approved": null
+    }
+  ],
+  "last_reviewed": null
+}
