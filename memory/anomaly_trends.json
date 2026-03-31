@@ -1,0 +1,23 @@
+{
+  "disk_samples": [
+    {
+      "timestamp": "2026-03-31T03:10:43.481718",
+      "value": 19
+    }
+  ],
+  "memory_samples": [
+    {
+      "timestamp": "2026-03-31T03:10:43.481724",
+      "value": 82
+    }
+  ],
+  "pihole_query_rates": [],
+  "last_check": "2026-03-31T03:10:43.481728",
+  "baselines": {},
+  "load_samples": [
+    {
+      "timestamp": "2026-03-31T03:10:43.481728",
+      "value": 2.39
+    }
+  ]
+}

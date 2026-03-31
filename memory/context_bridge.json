@@ -1,0 +1,13 @@
+{
+  "sessions": [
+    {
+      "started": "2026-03-31T03:10:43.500867",
+      "platform": "webchat",
+      "topic_continuity": null
+    }
+  ],
+  "topics": {},
+  "pending_actions": [],
+  "last_session_end": null,
+  "version": 1
+}

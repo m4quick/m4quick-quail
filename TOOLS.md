@@ -268,7 +268,69 @@ python3 ~/.openclaw/workspace/memory/review_facts.py --stats
 
 **Privacy:** Filters out SSNs, credit cards, passwords automatically.
 
-**Next:** Phase 2 (Voice-first, proactive intelligence, adaptive context)
+**Phase 2 Complete:** Voice-first, proactive intelligence, adaptive context
+
+### Phase 2: Hybrid Interface
+
+#### Voice Processor
+**Script:** `scripts/voice_processor.py`
+
+```bash
+# Process voice command (from Whisper transcription)
+python3 ~/.openclaw/workspace/scripts/voice_processor.py "How's my disk?"
+
+# Returns JSON:
+# {
+#   "type": "system_query",
+#   "text_response": "Full detailed response...",
+#   "voice_summary": "Concise for speech...",
+#   "voice_file": "/path/to/response.aiff"
+# }
+```
+
+**Flow:** Voice note → Whisper → voice_processor → Intent → Action → Voice + Text response
+
+#### Anomaly Detector (Proactive Intelligence)
+**Script:** `scripts/anomaly_detector.py`
+**State:** `memory/anomaly_trends.json`
+
+```bash
+# Detect anomalies before they become problems
+python3 ~/.openclaw/workspace/scripts/anomaly_detector.py
+
+# Example output:
+# 📊 Disk usage spike detected: 85% (normal: 75% ± 3%)
+# Suggestion: Run `du -sh ~/*/ | sort -hr | head -10`
+```
+
+**Detects:**
+- Statistical anomalies (Z-score > 2.5)
+- Rapid changes (>5% disk in 24h)
+- Memory pressure increases
+
+#### Context Bridge (Adaptive Context)
+**Script:** `memory/context_bridge.py`
+
+```bash
+# Start session (get contextual greeting)
+python3 ~/.openclaw/workspace/memory/context_bridge.py --start
+
+# End session (record topic)
+python3 ~/.openclaw/workspace/memory/context_bridge.py --end "MythBusters planning"
+
+# See recent topics
+python3 ~/.openclaw/workspace/memory/context_bridge.py --summary
+```
+
+**Contextual greetings:**
+- <30 min: "Back already?"
+- <2 hours: "Back to [topic]?"
+- <1 day: "Good to see you again."
+- >7 days: "It's been a while. How have you been?"
+
+---
+
+**Next:** Phase 3 (Intent-based automation, generated interfaces, autonomy spectrum)
 
 ---
 

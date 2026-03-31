@@ -79,7 +79,28 @@ docker ps | grep n8n
 docker restart n8n
 ```
 
+## Phase 2 Integration (Proactive Intelligence)
+
+**Anomaly Detection:** Runs alongside heartbeat checks
+```bash
+# Detect unusual patterns
+python3 ~/.openclaw/workspace/scripts/anomaly_detector.py
+
+# Full check including proactive alerts
+python3 ~/.openclaw/workspace/scripts/anomaly_detector.py --check-all
+```
+
+**Context Awareness:** Session bridging
+```bash
+# Start of session
+python3 ~/.openclaw/workspace/memory/context_bridge.py --start
+
+# End of session (record topic)
+python3 ~/.openclaw/workspace/memory/context_bridge.py --end "Pi-hole setup"
+```
+
 ## History
-- **2026-03-31:** Migrated to intelligent heartbeat with state tracking (Phase 1.1)
+- **2026-03-31:** Phase 2 — Anomaly detection, context bridge, voice processor
+- **2026-03-31:** Phase 1 — Migrated to intelligent heartbeat with state tracking
 - **2026-03-29:** Fixed Pi-hole monitoring — discovered it's Dockerized
 - **2026-03-25:** Added `pihole-dhcp-monitor.service/timer`
