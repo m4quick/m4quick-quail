@@ -1,0 +1,6 @@
+# Large files and cache
+memory/inanna_backup_*/
+memory/__pycache__/
+scripts/__pycache__/
+*.pyc
+temp/
