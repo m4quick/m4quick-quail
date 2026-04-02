@@ -3,21 +3,33 @@
     {
       "timestamp": "2026-03-31T03:10:43.481718",
       "value": 19
+    },
+    {
+      "timestamp": "2026-03-31T03:45:48.295608",
+      "value": 18
     }
   ],
   "memory_samples": [
     {
       "timestamp": "2026-03-31T03:10:43.481724",
       "value": 82
+    },
+    {
+      "timestamp": "2026-03-31T03:45:48.295615",
+      "value": 83
     }
   ],
   "pihole_query_rates": [],
-  "last_check": "2026-03-31T03:10:43.481728",
+  "last_check": "2026-03-31T03:45:48.295619",
   "baselines": {},
   "load_samples": [
     {
       "timestamp": "2026-03-31T03:10:43.481728",
       "value": 2.39
+    },
+    {
+      "timestamp": "2026-03-31T03:45:48.295618",
+      "value": 5.08
     }
   ]
 }

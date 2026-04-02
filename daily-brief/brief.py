@@ -17,9 +17,17 @@ app = Flask(__name__)
 def get_weather():
     """Fetch weather from wttr.in"""
     try:
-        url = f"https://wttr.in/{config.WEATHER_LOCATION}?format=%l:+%c+%t+(feels+like+%f),+%h+humidity&u"
-        response = requests.get(url, timeout=10)
-        return response.text.strip() if response.status_code == 200 else "Weather unavailable"
+        url = f"https://wttr.in/{config.WEATHER_LOCATION}?format=4&u"
+        headers = {'User-Agent': 'Mozilla/5.0 (Daily-Brief/1.0)'}
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code == 200:
+            return response.text.strip()
+        else:
+            return f"Weather service returned status {response.status_code}"
+    except requests.exceptions.Timeout:
+        return "Weather service timed out (check internet connection)"
+    except requests.exceptions.ConnectionError:
+        return "Weather service unreachable (check internet connection)"
     except Exception as e:
         return f"Weather error: {str(e)}"
 
@@ -128,11 +136,40 @@ def generate():
 
 @app.route('/preview', methods=['GET'])
 def preview():
-    """Preview brief without sending"""
+    """Preview brief without sending (JSON)"""
     return jsonify({
         'brief': generate_brief(),
         'timestamp': datetime.now().isoformat()
     })
+
+
+@app.route('/', methods=['GET'])
+def html_view():
+    """HTML view of daily brief (browser-friendly)"""
+    brief = generate_brief()
+    # Convert markdown to simple HTML
+    html = brief.replace('\n', '<br>')
+    html = html.replace('# ', '<h1>').replace('## ', '<h2>')
+    html = html.replace('**', '<b>').replace('**', '</b>')
+    
+    return f"""<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Brief</title>
+    <style>
+        body {{ font-family: -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; }}
+        h1 {{ color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }}
+        h2 {{ color: #555; margin-top: 30px; }}
+        .weather {{ font-size: 1.2em; background: #f5f5f5; padding: 15px; border-radius: 8px; }}
+        .status {{ background: #e8f5e9; padding: 10px 15px; border-radius: 5px; }}
+    </style>
+</head>
+<body>
+    {html}
+    <br><br>
+    <small><a href="/preview">View JSON</a> | <a href="/health">Health Check</a></small>
+</body>
+</html>"""
 
 
 if __name__ == '__main__':

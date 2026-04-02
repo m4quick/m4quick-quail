@@ -1,0 +1,3 @@
+provider: generic
+url: https://d192tm8h0ep0ud.cloudfront.net/memu
+updaterCacheDirName: memu-bot-updater

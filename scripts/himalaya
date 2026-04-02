@@ -1,0 +1,50 @@
+#!/bin/bash
+# himalaya-mail-bridge.sh - Himalaya-compatible wrapper for macOS Mail
+# Routes Himalaya CLI commands to AppleScript backend
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BRIDGE="$SCRIPT_DIR/mail-bridge.py"
+
+case "$1" in
+    "envelope"|"message")
+        shift
+        case "$1" in
+            "list")
+                shift
+                $BRIDGE list "$@"
+                ;;
+            "read")
+                shift
+                id="$1"
+                $BRIDGE read --id "$id"
+                ;;
+            "write")
+                shift
+                # Read from stdin or interactive
+                body=$(cat)
+                $BRIDGE send --to "$to" --subject "$subject" <<< "$body"
+                ;;
+            *)
+                $BRIDGE "$@"
+                ;;
+        esac
+        ;;
+    "folder")
+        shift
+        case "$1" in
+            "list")
+                $BRIDGE folders
+                ;;
+            *)
+                $BRIDGE folders
+                ;;
+        esac
+        ;;
+    "account")
+        echo "mmirzaie@msn.com (via macOS Mail)"
+        ;;
+    *)
+        # Pass through to mail-bridge
+        $BRIDGE "$@"
+        ;;
+esac

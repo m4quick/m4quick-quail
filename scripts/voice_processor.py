@@ -23,10 +23,10 @@ def text_to_speech(text, output_path=None):
     """Generate voice response using macOS say command."""
     if output_path:
         # Save to file
-        cmd = ['say', '-o', str(output_path), text]
+        cmd = ['say', '-v', 'Daniel', '-o', str(output_path), text]
     else:
         # Play immediately
-        cmd = ['say', text]
+        cmd = ['say', '-v', 'Daniel', text]
     
     try:
         subprocess.run(cmd, check=True, capture_output=True)
